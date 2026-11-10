@@ -1,0 +1,42 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 35vw;
+    height: 60vh;
+    background-color: aqua;
+
+    border: 5px double black;
+    border-radius: 15px;
+
+    box-shadow: 10px 10px 30px black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#logo{
+    width: 75%;
+
+}
+
+#divFormulario{
+    width: 75%;
+    height: 50%;
+}
+
+#divFormulario > h2{
+    margin-left: 5%;
+}
+
+
+
