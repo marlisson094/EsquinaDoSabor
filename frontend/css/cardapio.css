@@ -1,0 +1,431 @@
+/* ==========================================
+   RESET E CONFIGURAÇÕES GERAIS
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  color: #333333;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Container Principal Móvel por padrão */
+.container {
+  width: 100%;
+  max-width: 480px; /* Padrão Mobile */
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding-bottom: 90px; /* Espaço seguro para o footer fixo */
+  transition: max-width 0.3s ease;
+}
+
+/* ==========================================
+   HEADER / CABEÇALHO
+   ========================================== */
+.header-cardapio {
+  position: relative;
+  background-color: #ffffff;
+  border-bottom: 2px solid #eeeeee;
+}
+
+.header-banner {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+.img-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-infos {
+  padding: 12px 16px 16px 16px;
+  position: relative;
+}
+
+.logo-container {
+  position: absolute;
+  top: -40px;
+  left: 16px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#bgHeader {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  display: block;
+}
+
+.info-funcionamento {
+  margin-left: 90px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.info-funcionamento h2 {
+  font-size: 0.9rem;
+  color: #C82323;
+  font-weight: 700;
+}
+
+.info-endereco-redes {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.info-endereco-redes h3 {
+  font-size: 0.78rem;
+  color: #666666;
+  font-weight: 400;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.redes-sociais {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-rede {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-rede:hover {
+  transform: scale(1.08);
+  background-color: #fff8f0;
+}
+
+.btn-rede img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* ==========================================
+   MAIN: PESQUISA E CARROSSEL DE CATEGORIAS
+   ========================================== */
+.main-cardapio {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.secao-pesquisa-filtro {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-pesquisa {
+  display: flex;
+  align-items: center;
+  background-color: #f1f3f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 25px;
+  padding: 8px 16px;
+  gap: 10px;
+}
+
+.form-pesquisa:focus-within {
+  border-color: #FFC700;
+  background-color: #ffffff;
+}
+
+.icone-lupa {
+  width: 16px;
+  height: 16px;
+  opacity: 0.6;
+}
+
+#barraPesquisa {
+  border: none;
+  background: transparent;
+  width: 100%;
+  outline: none;
+  font-size: 0.9rem;
+  color: #333333;
+}
+
+.carrossel-categorias {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.carrossel-categorias::-webkit-scrollbar {
+  display: none;
+}
+
+.carrossel-categorias ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.categoria-item {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  border: 1.5px solid #FFC700;
+  border-radius: 20px;
+  color: #333333;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.categoria-item:hover {
+  background-color: #C82323;
+  color: #ffffff;
+  border-color: #C82323;
+}
+
+/* ==========================================
+   GRID E CARDS DE PRODUTOS
+   ========================================== */
+.grid-produtos {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.grid-produtos > div {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.card-produto {
+  display: flex;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  gap: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-produto:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.produto-img {
+  width: 95px;
+  height: 95px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.produto-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.produto-nome {
+  font-size: 0.95rem;
+  color: #222222;
+  font-weight: 700;
+}
+
+.produto-descricao {
+  font-size: 0.78rem;
+  color: #666666;
+  line-height: 1.3;
+  margin: 4px 0 8px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.produto-rodape-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.produto-preco {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #C82323;
+}
+
+/* Controles de Quantidade (+ e -) */
+.controles-quantidade {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 3px 8px;
+}
+
+.btn-qtd {
+  background-color: #C82323;
+  color: #ffffff;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.btn-qtd:hover {
+  background-color: #b81d1d;
+}
+
+.qtd-numero {
+  font-size: 0.85rem;
+  font-weight: 700;
+  min-width: 16px;
+  text-align: center;
+}
+
+/* ==========================================
+   FOOTER FIXO: CARRINHO E VALOR TOTAL
+   ========================================== */
+.footer-carrinho {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1);
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: max-width 0.3s ease;
+}
+
+.carrinho-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icone-carrinho {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.texto-valor span {
+  display: block;
+  font-size: 0.75rem;
+  color: #666666;
+}
+
+.texto-valor strong {
+  font-size: 1.1rem;
+  color: #C82323;
+  font-weight: 800;
+}
+
+.btn-finalizar {
+  background-color: #C82323;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 6px rgba(200, 35, 35, 0.3);
+}
+
+.btn-finalizar:hover {
+  background-color: #b81d1d;
+}
+
+/* ==========================================
+   ADAPTAÇÕES RESPONSIVAS PARA DESKTOP
+   ========================================== */
+@media screen and (min-width: 768px) {
+  /* Expande o container central em computadores */
+  .container {
+    max-width: 900px;
+    margin: 20px 0;
+    border-radius: 16px;
+    min-height: calc(100vh - 40px);
+    overflow: hidden;
+  }
+
+  .header-banner {
+    height: 200px;
+  }
+
+  /* Ajusta o grid de produtos para 2 colunas em telas médias/grandes */
+  .grid-produtos {
+    display: grid;
+    gap: 16px;
+  }
+
+  /* Acompanha a largura do container desktop no footer */
+  .footer-carrinho {
+    max-width: 900px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* Expande ainda mais o container para telas ultrawide ou monitores grandes */
+  .container {
+    max-width: 1050px;
+  }
+
+  .footer-carrinho {
+    max-width: 1050px;
+  }
+}

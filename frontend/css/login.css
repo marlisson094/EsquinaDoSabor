@@ -1,42 +1,166 @@
-body{
-    margin: 0px;
-    padding: 0px;
-    min-height: 100vh;
+/* Reseta margens e define tipografia moderna */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
 
+body {
+    min-height: 100vh;
+    /* Fundo suave em tom quente para harmonizar com a logo */
+    background: linear-gradient(135deg, #FFF8F0 0%, #F4E8D1 100%);
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
-.container{
-    width: 35vw;
-    height: 60vh;
-    background-color: aqua;
-
-    border: 5px double black;
-    border-radius: 15px;
-
-    box-shadow: 10px 10px 30px black;
-
+.container {
+    width: 100%;
+    max-width: 420px;        /* Largura confortável para o formulário e a logo */
+    background-color: #ffffff;
+    border-radius: 16px;
+    border: 2px solid #F5A623;
+    box-shadow: 0 10px 25px rgba(184, 29, 29, 0.12);
+    padding: 35px 28px;      /* Espaçamento interno ajustado */
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
-#logo{
-    width: 75%;
-
-}
-
-#divFormulario{
-    width: 75%;
-    height: 50%;
-}
-
-#divFormulario > h2{
-    margin-left: 5%;
+/* Regra atualizada para a Logo */
+#logo {
+    width: 100%;             /* Garante que ela se ajuste proporcionalmente */
+    max-width: 250px;        /* Aumentado de ~160px para 250px para dar destaque */
+    height: auto;
+    margin-bottom: 15px;
+    display: block;
+    transform: scale(1.5) /*Aumentado proporção da imagem sem inteferir nos outros elementos*/
 }
 
 
+#divFormulario {
+    width: 100%;
+}
 
+#divFormulario h2 {
+    text-align: center;
+    color: #B81D1D; /* Vermelho da marca */
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+#divFormulario > form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Estilização dos Fieldsets fiéis ao tom dourado */
+.campoEntrada {
+    border: 1.5px solid #E0BD68;
+    border-radius: 8px;
+    padding: 6px 12px 10px 12px;
+    background-color: #FFFDF9;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campoEntrada:focus-within {
+    border-color: #B81D1D; /* Destaca em vermelho ao clicar no input */
+    box-shadow: 0 0 0 3px rgba(184, 29, 29, 0.1);
+}
+
+.campoEntrada legend {
+    font-size: 0.85rem;
+    color: #B81D1D;
+    font-weight: 600;
+    padding: 0 6px;
+}
+
+.campoEntrada > input {
+    width: 100%;
+    height: 32px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #333333;
+    background: transparent;
+}
+
+/* Mensagem de Erro de Validação do CPF */
+#avisoErro {
+    color: #D9381E;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: center;
+    display: block;
+    min-height: 18px;
+}
+
+/* Botão Entrar com o Vermelho/Amarelo da Marca */
+#btnEnviar {
+    width: 100%;
+    padding: 12px;
+    background-color: #B81D1D; /* Vermelho principal */
+    color: #ffffff; /*Texto com contraste*/
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(184, 29, 29, 0.25);
+    transition: background-color 0.5s ease, transform 0.1s ease;
+}
+
+#btnEnviar:hover {
+    background-color: #9E1616;
+}
+
+#btnEnviar:active {
+    transform: scale(0.98);
+}
+
+/* Divisória e Logins Alternativos (Estéticos) */
+#containerLoginAlternativo {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    border-top: 1px dashed #E5D5C5;
+    padding-top: 20px;
+}
+
+.linkLoginAlternativo {
+    text-decoration: none;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.linkLoginAlternativo:hover {
+    background-color: #FFFDF9;
+    border-color: #F5A623;
+}
+
+.linkLoginAlternativo p {
+    font-size: 0.85rem;
+    color: #555555;
+    font-weight: 600;
+}
+
+.logoLoginAlternativo {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}

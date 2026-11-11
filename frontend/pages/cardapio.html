@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cardápio - Esquina do Sabor</title>
+    <link
+      rel="shortcut icon"
+      href="../../banco/imagens/cardapio.png"
+      type="image/x-icon" />
+    <link rel="stylesheet" href="../css/cardapio.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header-cardapio">
+        <div class="header-banner">
+          <img
+            src="../../banco/imagens/headerCardapio.jfif"
+            alt="Imagens de pratos do restaurante"
+            class="img-banner" />
+        </div>
+
+        <div id="infos" class="header-infos">
+          <div class="logo-container">
+            <img
+              id="bgHeader"
+              src="../../banco/imagens/logoTransparente.png"
+              alt="Logo do restaurante Esquina do Sabor" />
+          </div>
+
+          <div class="info-funcionamento">
+            <h2>Horário de funcionamento: 18h - 22h</h2>
+          </div>
+
+          <div class="info-endereco-redes">
+            <h3>
+              Av. Marechal Rondon, S/N - Rosa Elze, São Cristóvão - SE,
+              49100-000
+            </h3>
+            <div class="redes-sociais">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                class="btn-rede"
+                title="Instagram">
+                <img
+                  src="../../banco/imagens/instagram.png"
+                  alt="Logo Instagram" />
+              </a>
+              <a
+                href="https://wa.me/5579999999999"
+                target="_blank"
+                class="btn-rede"
+                title="WhatsApp">
+                <img
+                  src="../../banco/imagens/whatsapp.png"
+                  alt="Logo WhatsApp" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main-cardapio">
+        <section class="secao-pesquisa-filtro">
+          <form class="form-pesquisa" onsubmit="return false;">
+            <img
+              src="../../banco/imagens/lupa.png"
+              alt="Ícone de Lupa"
+              class="icone-lupa" />
+            <input
+              type="text"
+              id="barraPesquisa"
+              placeholder="Pesquise um prato..." />
+          </form>
+
+          <nav class="carrossel-categorias">
+            <ul>
+              <li>
+                <a href="#almoco" class="categoria-item active">Almoço</a>
+              </li>
+              <li><a href="#salgados" class="categoria-item">Salgados</a></li>
+              <li><a href="#pasteis" class="categoria-item">Pastéis</a></li>
+              <li>
+                <a href="#refrigerantes" class="categoria-item"
+                  >Refrigerantes</a
+                >
+              </li>
+              <li><a href="#sucos" class="categoria-item">Sucos</a></li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="grid-produtos">
+          <div id="almoco">
+            <h2>Almoço</h2>
+
+            <article class="card-produto">
+              <img
+                src="../../banco/imagens/coxinha.png"
+                alt="Foto de uma coxinha"
+                class="produto-img" />
+
+              <div class="produto-info">
+                <h4 class="produto-nome">Coxinha de Frango</h4>
+                <p class="produto-descricao">
+                  Massa cremosa a base de batata, superfície dourada e crocante,
+                  recheio de peito de frango desfiado com tempero da casa.
+                </p>
+
+                <div class="produto-rodape-card">
+                  <span class="produto-preco">R$ 4,50</span>
+                  <div class="controles-quantidade">
+                    <button type="button" class="btn-qtd btn-menos">-</button>
+                    <span class="qtd-numero">0</span>
+                    <button type="button" class="btn-qtd btn-mais">+</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div id="salgados">
+            <h2>Salgados</h2>
+
+            <article class="card-produto">
+              <img
+                src="../../banco/imagens/coxinha.png"
+                alt="Foto de uma coxinha"
+                class="produto-img" />
+
+              <div class="produto-info">
+                <h4 class="produto-nome">Coxinha de Frango</h4>
+                <p class="produto-descricao">
+                  Massa cremosa a base de batata, superfície dourada e crocante,
+                  recheio de peito de frango desfiado com tempero da casa.
+                </p>
+
+                <div class="produto-rodape-card">
+                  <span class="produto-preco">R$ 4,50</span>
+                  <div class="controles-quantidade">
+                    <button type="button" class="btn-qtd btn-menos">-</button>
+                    <span class="qtd-numero">0</span>
+                    <button type="button" class="btn-qtd btn-mais">+</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div id="pasteis">
+            <h2>Pastéis</h2>
+            <article class="card-produto">
+              <img
+                src="../../banco/imagens/coxinha.png"
+                alt="Foto de uma coxinha"
+                class="produto-img" />
+
+              <div class="produto-info">
+                <h4 class="produto-nome">Coxinha de Frango</h4>
+                <p class="produto-descricao">
+                  Massa cremosa a base de batata, superfície dourada e crocante,
+                  recheio de peito de frango desfiado com tempero da casa.
+                </p>
+
+                <div class="produto-rodape-card">
+                  <span class="produto-preco">R$ 4,50</span>
+                  <div class="controles-quantidade">
+                    <button type="button" class="btn-qtd btn-menos">-</button>
+                    <span class="qtd-numero">0</span>
+                    <button type="button" class="btn-qtd btn-mais">+</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div id="refrigerantes">
+            <h2>Refrigerantes</h2>
+            <article class="card-produto">
+              <img
+                src="../../banco/imagens/coxinha.png"
+                alt="Foto de uma coxinha"
+                class="produto-img" />
+
+              <div class="produto-info">
+                <h4 class="produto-nome">Coxinha de Frango</h4>
+                <p class="produto-descricao">
+                  Massa cremosa a base de batata, superfície dourada e crocante,
+                  recheio de peito de frango desfiado com tempero da casa.
+                </p>
+
+                <div class="produto-rodape-card">
+                  <span class="produto-preco">R$ 4,50</span>
+                  <div class="controles-quantidade">
+                    <button type="button" class="btn-qtd btn-menos">-</button>
+                    <span class="qtd-numero">0</span>
+                    <button type="button" class="btn-qtd btn-mais">+</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div id="sucos">
+            <h2>Sucos</h2>
+            <article class="card-produto">
+              <img
+                src="../../banco/imagens/coxinha.png"
+                alt="Foto de uma coxinha"
+                class="produto-img" />
+
+              <div class="produto-info">
+                <h4 class="produto-nome">Coxinha de Frango</h4>
+                <p class="produto-descricao">
+                  Massa cremosa a base de batata, superfície dourada e crocante,
+                  recheio de peito de frango desfiado com tempero da casa.
+                </p>
+
+                <div class="produto-rodape-card">
+                  <span class="produto-preco">R$ 4,50</span>
+                  <div class="controles-quantidade">
+                    <button type="button" class="btn-qtd btn-menos">-</button>
+                    <span class="qtd-numero">0</span>
+                    <button type="button" class="btn-qtd btn-mais">+</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="card-produto">
+              <img
+                src="../../banco/imagens/coxinha.png"
+                alt="Foto de uma coxinha"
+                class="produto-img" />
+
+              <div class="produto-info">
+                <h4 class="produto-nome">Coxinha de Frango</h4>
+                <p class="produto-descricao">
+                  Massa cremosa a base de batata, superfície dourada e crocante,
+                  recheio de peito de frango desfiado com tempero da casa.
+                </p>
+
+                <div class="produto-rodape-card">
+                  <span class="produto-preco">R$ 4,50</span>
+                  <div class="controles-quantidade">
+                    <button type="button" class="btn-qtd btn-menos">-</button>
+                    <span class="qtd-numero">0</span>
+                    <button type="button" class="btn-qtd btn-mais">+</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="card-produto">
+              <img
+                src="../../banco/imagens/coxinha.png"
+                alt="Foto de uma coxinha"
+                class="produto-img" />
+
+              <div class="produto-info">
+                <h4 class="produto-nome">Coxinha de Frango</h4>
+                <p class="produto-descricao">
+                  Massa cremosa a base de batata, superfície dourada e crocante,
+                  recheio de peito de frango desfiado com tempero da casa.
+                </p>
+
+                <div class="produto-rodape-card">
+                  <span class="produto-preco">R$ 4,50</span>
+                  <div class="controles-quantidade">
+                    <button type="button" class="btn-qtd btn-menos">-</button>
+                    <span class="qtd-numero">0</span>
+                    <button type="button" class="btn-qtd btn-mais">+</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer-carrinho">
+        <div class="carrinho-info">
+          <img
+            src="../../banco/imagens/carrinho-de-compras.png"
+            alt="Ícone do Carrinho de Compras"
+            class="icone-carrinho" />
+          <div class="texto-valor">
+            <span>Valor da compra:</span>
+            <strong id="valorTotal">R$ 0,00</strong>
+          </div>
+        </div>
+        <a href="carrinho.html" class="btn-finalizar">Finalizar Compra</a>
+      </footer>
+    </div>
+  </body>
+</html>

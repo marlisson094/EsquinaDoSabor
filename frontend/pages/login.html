@@ -1,31 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/frontend/css/login.css">
-    <link rel="shortcut icon" href="/banco/imagens/iconTitleLogin.png" type="image/x-icon">
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link
+      rel="shortcut icon"
+      href="/banco/imagens/iconTitleLogin.png"
+      type="image/x-icon" />
     <title>Login</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <img id="logo" src="/banco/imagens/logoTransparente.png" alt="Logo do restuarante Esquina do sabor">
-        <div id="divFormulario">
-            <h2>Faça Login</h2>
+      <img
+        id="logo"
+        src="../../banco/imagens/logoTransparente.png"
+        alt="Logo do restuarante Esquina do sabor" />
+      <div id="divFormulario">
+        <h2>Faça Login</h2>
 
-            <form action="">
-                <fieldset>
-                    <legend>Nome</legend>
-                    <input type="text" name="" id="">
-                </fieldset>
-                <fieldset>
-                    <legend>CPF</legend>
-                    <input type="text" name="" id="">
-                </fieldset>
+        <form action="" id="formulario" onsubmit="return false;">
+          <fieldset class="campoEntrada">
+            <legend>Nome</legend>
+            <input type="text" name="nome" id="nome" required />
+          </fieldset>
+          <fieldset class="campoEntrada">
+            <legend>CPF</legend>
+            <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" minlength="11" maxlength="14" required />
+        </fieldset>
+            <span id="avisoErro"></span>
 
-                <button id="btnEnviar">Login</button>
-            </form>
-        </div>
+          <button id="btnEnviar" type="submit">Login</button>
+        </form>
+      </div>
+
+      <div id = "containerLoginAlternativo">
+        <a href="emObras.html" class="linkLoginAlternativo"  id="loginGoogle">
+            <img class="logoLoginAlternativo" src="../../banco/imagens/google.png" alt="logo da google" />
+            <p>Conta Google</p>
+        </a>
+        <a href="emObras.html"  class="linkLoginAlternativo" id="loginFacebook">
+            <img class="logoLoginAlternativo" src="../../banco/imagens/facebook.png" alt="logo do facebook">
+            <p>Conta facebook</p>
+        </a>
+      </div>
     </div>
-</body>
+
+    <script src="../scripts/login.js"></script>
+  </body>
 </html>
